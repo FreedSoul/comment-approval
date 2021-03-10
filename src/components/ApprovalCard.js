@@ -1,22 +1,24 @@
 import React from 'react'
-import CommentDetail from './CommentDetail'
-import faker from 'faker'
+import { Button, Card } from 'semantic-ui-react'
+//import faker from 'faker'
 
 const ApprovalCard = (props) =>{
     return (
-        <div className="ui card"> 
-            <div className = "content">
+        <Card> 
+            <Card.Content>
                 {props.children}
-            </div>
+            </Card.Content>
+            <Card.Content extra>
                 <div className = "extra ui two buttons">
-                    <div className = "ui inverted green button">  
+                    <Button inverted color="green">  
                         accept
-                    </div>
-                    <div className = "ui inverted red button">
+                    </Button>
+                    <Button inverted color="red">  
                         reject
-                    </div>
+                    </Button>
                 </div>
-        </div>
+            </Card.Content>
+        </Card>
     )
 }
 
